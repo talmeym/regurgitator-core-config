@@ -32,4 +32,7 @@ public interface CoreConfigConstants {
 
 	// number generator
 	public static final String MAX = "max";
+
+	// index-of-processor
+	public static final String LAST = "last";
 }
