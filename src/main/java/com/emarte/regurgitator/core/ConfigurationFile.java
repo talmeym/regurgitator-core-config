@@ -1,5 +1,6 @@
 package com.emarte.regurgitator.core;
 
+import static com.emarte.regurgitator.core.CacheProvider.Cache;
 import static com.emarte.regurgitator.core.EntityLookup.configurationLoader;
 import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 
