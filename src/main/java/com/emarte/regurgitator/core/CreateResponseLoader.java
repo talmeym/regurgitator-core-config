@@ -28,6 +28,6 @@ public abstract class CreateResponseLoader {
 
 		ContextLocation location = source != null ? new ContextLocation(source) : null;
 		log.debug("Loaded create response '" + id + "'");
-		return new CreateResponse(id, location, value, processor);
+		return new CreateResponse(id, new ValueSource(location, value), processor);
 	}
 }

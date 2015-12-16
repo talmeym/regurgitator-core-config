@@ -25,6 +25,6 @@ public abstract class CreateParameterLoader {
 
 		ContextLocation location = source != null ? new ContextLocation(source) : null;
 		log.debug("Loaded create parameter '" + id + "'");
-		return new CreateParameter(id, prototype, context, location, value, processor);
+		return new CreateParameter(id, prototype, context, new ValueSource(location, value), processor);
 	}
 }
