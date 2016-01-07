@@ -38,4 +38,5 @@ public interface CoreConfigConstants {
 
 	// isolate
 	public static final String INCLUDE_SESSION = "include-session";
+	public static final String INCLUDE_PARAMETERS = "include-parameters";
 }
