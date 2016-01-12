@@ -2,7 +2,7 @@ package com.emarte.regurgitator.core;
 
 import java.util.ServiceLoader;
 
-public class EntityLookup {
+public final class EntityLookup {
 	private static final ServiceLoader<EntityPack> ENTITY_PACKS = ServiceLoader.load(EntityPack.class);
 	
 	public static boolean hasConditionBehaviour(String id) {

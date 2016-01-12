@@ -4,7 +4,7 @@ import static com.emarte.regurgitator.core.CacheProvider.Cache;
 import static com.emarte.regurgitator.core.EntityLookup.configurationLoader;
 import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 
-public class ConfigurationFile {
+public final class ConfigurationFile {
     private static final Log log = Log.getLog(ConfigurationFile.class);
 
     public static Step loadFile(String configFilePath) throws RegurgitatorException {
