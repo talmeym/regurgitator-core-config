@@ -20,6 +20,7 @@ public final class ConfigurationFile {
 		try {
 			String suffix = configFilePath.substring(configFilePath.lastIndexOf(".") + 1);
 			Step step = configurationLoader(suffix).load(getInputStreamForFile(configFilePath));
+			log.debug("Add configuration to cache");
 			cache.set(configFilePath, step);
 			return step;
 		} catch(RegurgitatorException re) {
