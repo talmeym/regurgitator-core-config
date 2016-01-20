@@ -36,7 +36,6 @@ public interface CoreConfigConstants {
 	// index-of-processor
 	public static final String LAST = "last";
 
-	// isolate
-	public static final String INCLUDE_SESSION = "include-session";
-	public static final String INCLUDE_PARAMETERS = "include-parameters";
+	// sequence
+	public static final String ISOLATE = "isolate";
 }
