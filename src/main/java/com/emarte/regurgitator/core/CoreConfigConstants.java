@@ -38,4 +38,7 @@ public interface CoreConfigConstants {
 
 	// sequence
 	public static final String ISOLATE = "isolate";
+
+	// size processor
+	public static final String AS_INDEX ="as-index";
 }

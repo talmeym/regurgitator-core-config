@@ -30,6 +30,6 @@ public class CoreEntityPack extends AbstractEntityPack {
 		addValueGenerator("NUMBER", new NumberGenerator());
 		addValueGenerator("UUID", new UuidGenerator());
 
-		addValueProcessor("size-processor", new SizeProcessor());
+		addValueProcessor("size-processor", new SizeProcessor(false));
 	}
 }
