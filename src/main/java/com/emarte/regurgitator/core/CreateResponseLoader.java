@@ -1,7 +1,6 @@
 package com.emarte.regurgitator.core;
 
-import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
-import static com.emarte.regurgitator.core.FileUtil.streamToString;
+import static com.emarte.regurgitator.core.FileUtil.*;
 
 public abstract class CreateResponseLoader {
 	protected Step buildCreateResponse(String id, String source, String value, String file, ValueProcessor processor, Log log) throws RegurgitatorException {

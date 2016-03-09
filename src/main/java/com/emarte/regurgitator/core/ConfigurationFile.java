@@ -3,9 +3,10 @@ package com.emarte.regurgitator.core;
 import static com.emarte.regurgitator.core.CacheProvider.Cache;
 import static com.emarte.regurgitator.core.EntityLookup.configurationLoader;
 import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
+import static com.emarte.regurgitator.core.Log.getLog;
 
 public final class ConfigurationFile {
-    private static final Log log = Log.getLog(ConfigurationFile.class);
+    private static final Log log = getLog(ConfigurationFile.class);
 
     public static Step loadFile(String configFilePath) throws RegurgitatorException {
 		Cache<Step> cache = Caching.getCache(Step.class);
