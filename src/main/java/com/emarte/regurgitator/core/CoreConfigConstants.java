@@ -41,4 +41,7 @@ public interface CoreConfigConstants {
 
 	// size processor
 	public static final String AS_INDEX ="as-index";
+
+	// record message
+	public static final String FOLDER ="folder";
 }
