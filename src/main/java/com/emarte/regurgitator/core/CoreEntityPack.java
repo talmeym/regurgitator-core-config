@@ -25,7 +25,7 @@ public class CoreEntityPack extends AbstractEntityPack {
 
 		addRulesBehaviour("ALL_MATCHES", new AllMatchesBehaviour());
 		addRulesBehaviour("FIRST_MATCH", new FirstMatchBehaviour());
-		addRulesBehaviour("FIRST_MATCH_ONWARDS", new FirstMatchBehaviour());
+		addRulesBehaviour("FIRST_MATCH_ONWARDS", new FirstMatchOnwardsBehaviour());
 
 		addValueGenerator("NUMBER", new NumberGenerator());
 		addValueGenerator("UUID", new UuidGenerator());
