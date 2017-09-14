@@ -3,8 +3,15 @@ package com.emarte.regurgitator.core;
 import java.lang.reflect.Constructor;
 
 @SuppressWarnings({"unchecked"})
-public abstract class LoaderUtil<TYPE extends Loader> {
-	public TYPE buildFromClass(String className) throws RegurgitatorException {
+public abstract class LoaderUtil<DATA, TYPE extends Loader> {
+
+	public abstract TYPE deriveLoader(DATA data) throws RegurgitatorException;
+
+	abstract String deriveClass(DATA data) throws RegurgitatorException;
+
+	abstract String deriveClass(String packageName, String className) throws RegurgitatorException;
+
+	protected TYPE buildFromClass(String className) throws RegurgitatorException {
 		try {
 			Class clazz = Class.forName(className);
 			Constructor constructor = clazz.getConstructor();
