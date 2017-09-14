@@ -37,10 +37,6 @@ public class StringUtil {
 		return camelCase(string.toLowerCase().split("-"));
 	}
 
-	static String underscoresToCamelCase(String string) throws RegurgitatorException {
-		return camelCase(string.toLowerCase().split("_"));
-	}
-
 	static String camelCase(String[] parts) throws RegurgitatorException {
 		StringBuilder builder = new StringBuilder(capitaliseFirstLetter(parts[0]));
 
