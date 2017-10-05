@@ -8,7 +8,7 @@ public class StringUtil {
 
         String[] parts = string.split("\\" + delimiter);
 
-        if(parts == null || parts.length == 0) {
+        if(parts.length == 0) {
             throw new IllegalArgumentException("string '" + string + "' cannot split on character '" + delimiter + "'");
         }
 
