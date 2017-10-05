@@ -3,33 +3,33 @@ package com.emarte.regurgitator.core;
 import java.lang.reflect.Constructor;
 
 @SuppressWarnings({"unchecked"})
-public abstract class LoaderUtil<DATA, TYPE extends Loader> {
+abstract class LoaderUtil<DATA, TYPE extends Loader> {
 
-	public abstract TYPE deriveLoader(DATA data) throws RegurgitatorException;
+    public abstract TYPE deriveLoader(DATA data) throws RegurgitatorException;
 
-	abstract String deriveClass(DATA data) throws RegurgitatorException;
+    abstract String deriveClass(DATA data) throws RegurgitatorException;
 
-	abstract String deriveClass(String packageName, String className) throws RegurgitatorException;
+    abstract String deriveClass(String packageName, String className) throws RegurgitatorException;
 
-	protected TYPE buildFromClass(String className) throws RegurgitatorException {
-		try {
-			Class clazz = Class.forName(className);
-			Constructor constructor = clazz.getConstructor();
-			Object object = constructor.newInstance();
+    TYPE buildFromClass(String className) throws RegurgitatorException {
+        try {
+            Class clazz = Class.forName(className);
+            Constructor constructor = clazz.getConstructor();
+            Object object = constructor.newInstance();
 
-			if (!(object instanceof Loader)) {
-				throw new RegurgitatorException("Class '" + clazz + "' does not implement Loader");
-			}
+            if (!(object instanceof Loader)) {
+                throw new RegurgitatorException("Class '" + clazz + "' does not implement Loader");
+            }
 
-			return (TYPE) object;
-		} catch (NoSuchMethodException e) {
-			throw new RegurgitatorException("Class has no default constructor: " + className, e);
-		} catch (ClassCastException e) {
-			throw new RegurgitatorException("Class is not of correct type", e);
-		} catch (ClassNotFoundException e) {
-			throw new RegurgitatorException("Class not found: " + className);
-		} catch (Exception e) {
-			throw new RegurgitatorException("Exception calling constructor of class: " + className, e);
-		}
-	}
+            return (TYPE) object;
+        } catch (NoSuchMethodException e) {
+            throw new RegurgitatorException("Class has no default constructor: " + className, e);
+        } catch (ClassCastException e) {
+            throw new RegurgitatorException("Class is not of correct type", e);
+        } catch (ClassNotFoundException e) {
+            throw new RegurgitatorException("Class not found: " + className);
+        } catch (Exception e) {
+            throw new RegurgitatorException("Exception calling constructor of class: " + className, e);
+        }
+    }
 }
