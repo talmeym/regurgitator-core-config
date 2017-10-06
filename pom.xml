@@ -11,17 +11,17 @@
     <name>Regurgitator Core Config</name>
 
     <properties>
-	   <maven.compiler.source>1.6</maven.compiler.source>
-	   <maven.compiler.target>1.6</maven.compiler.target>
-	   <github.global.server>github</github.global.server>
+       <maven.compiler.source>1.6</maven.compiler.source>
+       <maven.compiler.target>1.6</maven.compiler.target>
+       <github.global.server>github</github.global.server>
     </properties>
 
    <distributionManagement>
-	   <repository>
-		   <id>internal.repo</id>
-		   <name>Temporary Staging Repository</name>
-		   <url>file:///tmp/regurgitator-mvn-repo</url>
-	   </repository>
+       <repository>
+           <id>internal.repo</id>
+           <name>Temporary Staging Repository</name>
+           <url>file:///tmp/regurgitator-mvn-repo</url>
+       </repository>
    </distributionManagement>
 
     <dependencies>
