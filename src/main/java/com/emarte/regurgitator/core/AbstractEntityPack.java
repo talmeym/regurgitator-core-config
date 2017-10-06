@@ -1,15 +1,19 @@
+/*
+ * Copyright (C) 2017 Miles Talmey.
+ * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+ */
 package com.emarte.regurgitator.core;
 
 import java.util.*;
 
 public class AbstractEntityPack implements EntityPack {
-    private Map<String, ConditionBehaviour> CONDITION_BEHAVIOURS = new HashMap<String, ConditionBehaviour>();
-    private Map<String, ConfigurationLoader> CONFIGURATION_LOADERS = new HashMap<String, ConfigurationLoader>();
-    private Map<String, ParameterType> PARAMETER_TYPES = new HashMap<String, ParameterType>();
-    private Map<String, RulesBehaviour> RULES_BEHAVIOURS = new HashMap<String, RulesBehaviour>();
-    private Map<String, ValueBuilder> VALUE_BUILDERS = new HashMap<String, ValueBuilder>();
-    private Map<String, ValueGenerator> VALUE_GENERATORS = new HashMap<String, ValueGenerator>();
-    private Map<String, ValueProcessor> VALUE_PROCESSORS = new HashMap<String, ValueProcessor>();
+    private final Map<String, ConditionBehaviour> CONDITION_BEHAVIOURS = new HashMap<String, ConditionBehaviour>();
+    private final Map<String, ConfigurationLoader> CONFIGURATION_LOADERS = new HashMap<String, ConfigurationLoader>();
+    private final Map<String, ParameterType> PARAMETER_TYPES = new HashMap<String, ParameterType>();
+    private final Map<String, RulesBehaviour> RULES_BEHAVIOURS = new HashMap<String, RulesBehaviour>();
+    private final Map<String, ValueBuilder> VALUE_BUILDERS = new HashMap<String, ValueBuilder>();
+    private final Map<String, ValueGenerator> VALUE_GENERATORS = new HashMap<String, ValueGenerator>();
+    private final Map<String, ValueProcessor> VALUE_PROCESSORS = new HashMap<String, ValueProcessor>();
 
     protected void addConditionBehaviour(String code, ConditionBehaviour conditionBehaviour) {
         CONDITION_BEHAVIOURS.put(code, conditionBehaviour);

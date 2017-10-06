@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2017 Miles Talmey.
+ * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+ */
 package com.emarte.regurgitator.core;
 
 public class StringUtil {
@@ -19,7 +23,7 @@ public class StringUtil {
         return string.startsWith(beginning) ? string.substring(beginning.length()) : string;
     }
 
-    private static String capitaliseFirstLetter(String string) throws RegurgitatorException {
+    private static String capitaliseFirstLetter(String string) {
         return string.substring(0, 1).toUpperCase() + (string.length() > 1 ? string.substring(1) : "");
     }
 
@@ -33,11 +37,11 @@ public class StringUtil {
         return builder.toString();
     }
 
-    static String dashesToCamelCase(String string) throws RegurgitatorException {
+    static String dashesToCamelCase(String string) {
         return camelCase(string.toLowerCase().split("-"));
     }
 
-    private static String camelCase(String[] parts) throws RegurgitatorException {
+    private static String camelCase(String[] parts) {
         StringBuilder builder = new StringBuilder(capitaliseFirstLetter(parts[0]));
 
         for (int i = 1; i < parts.length; i++) {
