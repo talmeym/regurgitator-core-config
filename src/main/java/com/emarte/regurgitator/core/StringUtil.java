@@ -19,7 +19,7 @@ public class StringUtil {
         return string.startsWith(beginning) ? string.substring(beginning.length()) : string;
     }
 
-    static String capitaliseFirstLetter(String string) throws RegurgitatorException {
+    private static String capitaliseFirstLetter(String string) throws RegurgitatorException {
         return string.substring(0, 1).toUpperCase() + (string.length() > 1 ? string.substring(1) : "");
     }
 
@@ -37,7 +37,7 @@ public class StringUtil {
         return camelCase(string.toLowerCase().split("-"));
     }
 
-    static String camelCase(String[] parts) throws RegurgitatorException {
+    private static String camelCase(String[] parts) throws RegurgitatorException {
         StringBuilder builder = new StringBuilder(capitaliseFirstLetter(parts[0]));
 
         for (int i = 1; i < parts.length; i++) {
