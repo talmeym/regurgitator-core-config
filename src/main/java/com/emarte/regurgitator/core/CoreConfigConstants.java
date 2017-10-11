@@ -15,8 +15,6 @@ public interface CoreConfigConstants {
     String PROCESSOR = "processor";
     String VALUE = "value";
     String FILE = "file";
-
-    // decision
     String RULES = "rules";
     String STEPS = "steps";
     String RULE = "rule";
@@ -25,27 +23,13 @@ public interface CoreConfigConstants {
     String BEHAVIOUR = "behaviour";
     String EXPECTATION = "expectation";
     String DEFAULT_STEP = "default-step";
-
-    // extract
     String FORMAT = "format";
     String INDEX = "index";
-
-    // substitute
     String TOKEN = "token";
     String REPLACEMENT = "replacement";
-
-    // number generator
     String MAX = "max";
-
-    // index-of-processor
     String LAST = "last";
-
-    // sequence
     String ISOLATE = "isolate";
-
-    // size processor
     String AS_INDEX ="as-index";
-
-    // record message
     String FOLDER ="folder";
 }
