@@ -4,7 +4,8 @@
  */
 package com.emarte.regurgitator.core;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AbstractEntityPack implements EntityPack {
     private final Map<String, ConditionBehaviour> CONDITION_BEHAVIOURS = new HashMap<String, ConditionBehaviour>();
