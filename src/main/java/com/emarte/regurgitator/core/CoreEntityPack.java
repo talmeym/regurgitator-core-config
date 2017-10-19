@@ -27,12 +27,12 @@ public class CoreEntityPack extends AbstractEntityPack {
         addParameterType("SET_OF_NUMBER", SET_OF_NUMBER);
         addParameterType("SET_OF_DECIMAL", SET_OF_DECIMAL);
 
-        addRulesBehaviour("ALL_MATCHES", new AllMatchesBehaviour());
-        addRulesBehaviour("FIRST_MATCH", new FirstMatchBehaviour());
-        addRulesBehaviour("FIRST_MATCH_ONWARDS", new FirstMatchOnwardsBehaviour());
+        addRulesBehaviour("all-matches", new AllMatchesBehaviour());
+        addRulesBehaviour("first-match", new FirstMatchBehaviour());
+        addRulesBehaviour("first-match-onwards", new FirstMatchOnwardsBehaviour());
 
-        addValueGenerator("NUMBER", new NumberGenerator());
-        addValueGenerator("UUID", new UuidGenerator());
+        addValueGenerator("number-generator", new NumberGenerator());
+        addValueGenerator("uuid-generator", new UuidGenerator());
 
         addValueProcessor("size-processor", new SizeProcessor(false));
     }
