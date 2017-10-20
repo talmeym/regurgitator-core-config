@@ -4,6 +4,9 @@
  */
 package com.emarte.regurgitator.core;
 
+import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
+import static com.emarte.regurgitator.core.FileUtil.streamToString;
+
 abstract class CreateParameterLoader {
     Step buildCreateParameter(String id, ParameterPrototype prototype, String context, String source, String value, String file, ValueProcessor processor, Log log) throws RegurgitatorException {
         int numberSet = 0;
@@ -21,7 +24,7 @@ abstract class CreateParameterLoader {
 
         if(file != null) {
             try {
-                value = FileUtil.streamToString(FileUtil.getInputStreamForFile(file));
+                value = streamToString(getInputStreamForFile(file));
             } catch (Exception e) {
                 throw new RegurgitatorException("Error loading file: " + file, e);
             }
