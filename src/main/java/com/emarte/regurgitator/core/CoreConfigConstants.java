@@ -20,6 +20,7 @@ public interface CoreConfigConstants {
     String RULE = "rule";
     String STEP = "step";
     String CONDITION = "condition";
+    String CONDITIONS = "conditions";
     String BEHAVIOUR = "behaviour";
     String EXPECTATION = "expectation";
     String DEFAULT_STEP = "default-step";
