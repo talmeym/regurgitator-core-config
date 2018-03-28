@@ -11,6 +11,7 @@ public class CoreEntityPack extends AbstractEntityPack {
     public CoreEntityPack() {
         addConditionBehaviour("contains", new ContainsBehaviour());
         addConditionBehaviour("equals", new EqualsBehaviour());
+        addConditionBehaviour("matches", new MatchesBehaviour());
         addConditionBehaviour("exists", new ExistsBehaviour());
         addConditionBehaviour("equals-param", new EqualsParamBehaviour());
         addConditionBehaviour("contains-param", new ContainsParamBehaviour());
