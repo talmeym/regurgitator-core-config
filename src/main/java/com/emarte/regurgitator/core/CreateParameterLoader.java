@@ -5,12 +5,13 @@
 package com.emarte.regurgitator.core;
 
 import java.io.IOException;
+import java.util.List;
 
 import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 import static com.emarte.regurgitator.core.FileUtil.streamToString;
 
 abstract class CreateParameterLoader {
-    Step buildCreateParameter(String id, ParameterPrototype prototype, String context, String source, String value, String file, ValueProcessor processor, Log log) throws RegurgitatorException {
+    Step buildCreateParameter(String id, ParameterPrototype prototype, String context, String source, String value, String file, List<ValueProcessor> processors, Log log) throws RegurgitatorException {
         int numberSet = 0;
         numberSet = source != null ? ++numberSet : numberSet;
         numberSet = value != null ? ++numberSet : numberSet;
@@ -34,6 +35,6 @@ abstract class CreateParameterLoader {
 
         ContextLocation location = source != null ? new ContextLocation(source) : null;
         log.debug("Loaded create parameter '{}'", id);
-        return new CreateParameter(id, prototype, context, new ValueSource(location, value), processor);
+        return new CreateParameter(id, prototype, context, new ValueSource(location, value), processors);
     }
 }

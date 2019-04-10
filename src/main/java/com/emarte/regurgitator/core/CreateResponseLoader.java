@@ -5,12 +5,13 @@
 package com.emarte.regurgitator.core;
 
 import java.io.IOException;
+import java.util.List;
 
 import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 import static com.emarte.regurgitator.core.FileUtil.streamToString;
 
 abstract class CreateResponseLoader {
-    Step buildCreateResponse(String id, String source, String value, String file, ValueProcessor processor, Log log) throws RegurgitatorException {
+    Step buildCreateResponse(String id, String source, String value, String file, List<ValueProcessor> processors, Log log) throws RegurgitatorException {
         int numberSet = 0;
         numberSet = source != null ? ++numberSet : numberSet;
         numberSet = value != null ? ++numberSet : numberSet;
@@ -34,6 +35,6 @@ abstract class CreateResponseLoader {
 
         ContextLocation location = source != null ? new ContextLocation(source) : null;
         log.debug("Loaded create response '{}'", id);
-        return new CreateResponse(id, new ValueSource(location, value), processor);
+        return new CreateResponse(id, new ValueSource(location, value), processors);
     }
 }
