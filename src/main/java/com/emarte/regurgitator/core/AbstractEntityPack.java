@@ -16,8 +16,8 @@ public class AbstractEntityPack implements EntityPack {
     private final Map<String, ValueGenerator> VALUE_GENERATORS = new HashMap<String, ValueGenerator>();
     private final Map<String, ValueProcessor> VALUE_PROCESSORS = new HashMap<String, ValueProcessor>();
 
-    protected void addConditionBehaviour(String code, ConditionBehaviour conditionBehaviour) {
-        CONDITION_BEHAVIOURS.put(code, conditionBehaviour);
+    protected void addConditionBehaviour(String code, ConditionBehaviour behaviour) {
+        CONDITION_BEHAVIOURS.put(code, behaviour);
     }
 
     @Override
@@ -25,8 +25,8 @@ public class AbstractEntityPack implements EntityPack {
         return CONDITION_BEHAVIOURS.get(id);
     }
 
-    protected void addConfigurationLoader(String code, ConfigurationLoader configurationLoader) {
-        CONFIGURATION_LOADERS.put(code, configurationLoader);
+    protected void addConfigurationLoader(String code, ConfigurationLoader loader) {
+        CONFIGURATION_LOADERS.put(code, loader);
     }
 
     @Override
@@ -34,8 +34,8 @@ public class AbstractEntityPack implements EntityPack {
         return CONFIGURATION_LOADERS.get(id);
     }
 
-    protected void addParameterType(String code, ParameterType parameterType) {
-        PARAMETER_TYPES.put(code, parameterType);
+    protected void addParameterType(String code, ParameterType type) {
+        PARAMETER_TYPES.put(code, type);
     }
 
     @Override
@@ -43,8 +43,8 @@ public class AbstractEntityPack implements EntityPack {
         return PARAMETER_TYPES.get(id);
     }
 
-    protected void addRulesBehaviour(String code, RulesBehaviour rulesBehaviour) {
-        RULES_BEHAVIOURS.put(code, rulesBehaviour);
+    protected void addRulesBehaviour(String code, RulesBehaviour behaviour) {
+        RULES_BEHAVIOURS.put(code, behaviour);
     }
 
     @Override
@@ -52,8 +52,8 @@ public class AbstractEntityPack implements EntityPack {
         return RULES_BEHAVIOURS.get(id);
     }
 
-    protected void addValueBuilder(String code, ValueBuilder valueBuilder) {
-        VALUE_BUILDERS.put(code, valueBuilder);
+    protected void addValueBuilder(String code, ValueBuilder builder) {
+        VALUE_BUILDERS.put(code, builder);
     }
 
     @Override
@@ -61,8 +61,8 @@ public class AbstractEntityPack implements EntityPack {
         return VALUE_BUILDERS.get(id);
     }
 
-    protected void addValueGenerator(String code, ValueGenerator valueGenerator) {
-        VALUE_GENERATORS.put(code, valueGenerator);
+    protected void addValueGenerator(String code, ValueGenerator generator) {
+        VALUE_GENERATORS.put(code, generator);
     }
 
     @Override
@@ -70,8 +70,8 @@ public class AbstractEntityPack implements EntityPack {
         return VALUE_GENERATORS.get(id);
     }
 
-    protected void addValueProcessor(String code, ValueProcessor valueProcessor) {
-        VALUE_PROCESSORS.put(code, valueProcessor);
+    protected void addValueProcessor(String code, ValueProcessor processor) {
+        VALUE_PROCESSORS.put(code, processor);
     }
 
     @Override
