@@ -13,6 +13,7 @@ public interface CoreConfigConstants {
     String MERGE = "merge";
     String BUILDER = "builder";
     String PROCESSOR = "processor";
+    String PROCESSORS = "processors";
     String VALUE = "value";
     String FILE = "file";
     String RULES = "rules";
