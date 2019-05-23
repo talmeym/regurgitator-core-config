@@ -34,4 +34,6 @@ public interface CoreConfigConstants {
     String ISOLATE = "isolate";
     String AS_INDEX ="as-index";
     String FOLDER ="folder";
+    String INDEX_SOURCE = "index-from";
+    String VALUE_SOURCE = "value-from";
 }
