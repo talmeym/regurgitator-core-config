@@ -8,7 +8,15 @@ import java.util.ServiceLoader;
 
 public final class EntityLookup {
     private static final ServiceLoader<EntityPack> ENTITY_PACKS = ServiceLoader.load(EntityPack.class);
-    
+
+    static {
+        Log log = Log.getLog(EntityLookup.class);
+
+        for (EntityPack pack : ENTITY_PACKS) {
+            log.debug("Loaded entity pack: " + pack.getClass().getName());
+        }
+    }
+
     public static boolean hasConditionBehaviour(String id) {
         return findConditionBehaviour(id) != null;
     }
