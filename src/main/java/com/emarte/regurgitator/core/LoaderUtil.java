@@ -6,8 +6,8 @@ package com.emarte.regurgitator.core;
 
 import java.lang.reflect.Constructor;
 
-@SuppressWarnings({"unchecked"})
-abstract class LoaderUtil<DATA, TYPE extends Loader> {
+@SuppressWarnings("unchecked")
+abstract class LoaderUtil<DATA, TYPE extends Loader<?, ?>> {
 
     public abstract TYPE deriveLoader(DATA data) throws RegurgitatorException;
 
@@ -17,8 +17,8 @@ abstract class LoaderUtil<DATA, TYPE extends Loader> {
 
     TYPE buildFromClass(String className) throws RegurgitatorException {
         try {
-            Class clazz = Class.forName(className);
-            Constructor constructor = clazz.getConstructor();
+            Class<?> clazz = Class.forName(className);
+            Constructor<?> constructor = clazz.getConstructor();
             Object object = constructor.newInstance();
 
             if (!(object instanceof Loader)) {

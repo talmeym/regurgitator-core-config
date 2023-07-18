@@ -10,7 +10,7 @@ import java.util.Map;
 public class AbstractEntityPack implements EntityPack {
     private final Map<String, ConditionBehaviour> CONDITION_BEHAVIOURS = new HashMap<String, ConditionBehaviour>();
     private final Map<String, ConfigurationLoader> CONFIGURATION_LOADERS = new HashMap<String, ConfigurationLoader>();
-    private final Map<String, ParameterType> PARAMETER_TYPES = new HashMap<String, ParameterType>();
+    private final Map<String, ParameterType<?>> PARAMETER_TYPES = new HashMap<String, ParameterType<?>>();
     private final Map<String, RulesBehaviour> RULES_BEHAVIOURS = new HashMap<String, RulesBehaviour>();
     private final Map<String, ValueBuilder> VALUE_BUILDERS = new HashMap<String, ValueBuilder>();
     private final Map<String, ValueGenerator> VALUE_GENERATORS = new HashMap<String, ValueGenerator>();
@@ -34,12 +34,12 @@ public class AbstractEntityPack implements EntityPack {
         return CONFIGURATION_LOADERS.get(id);
     }
 
-    protected void addParameterType(String code, ParameterType type) {
+    protected void addParameterType(String code, ParameterType<?> type) {
         PARAMETER_TYPES.put(code, type);
     }
 
     @Override
-    public ParameterType getParameterType(String id) {
+    public ParameterType<?> getParameterType(String id) {
         return PARAMETER_TYPES.get(id);
     }
 

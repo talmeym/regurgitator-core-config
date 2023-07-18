@@ -13,9 +13,9 @@ import static com.emarte.regurgitator.core.FileUtil.streamToString;
 abstract class CreateResponseLoader {
     Step buildCreateResponse(String id, String source, String value, String file, List<ValueProcessor> processors, Log log) throws RegurgitatorException {
         int numberSet = 0;
-        numberSet = source != null ? ++numberSet : numberSet;
-        numberSet = value != null ? ++numberSet : numberSet;
-        numberSet = file != null ? ++numberSet : numberSet;
+        numberSet += source != null ? 1 : 0;
+        numberSet += value != null ? 1 : 0;
+        numberSet += file != null ? 1 : 0;
 
         if(numberSet == 0) {
             throw new RegurgitatorException("Source, value or file is required");

@@ -73,8 +73,8 @@ public final class EntityLookup {
         return findParameterType(id) != null;
     }
 
-    public static ParameterType parameterType(String id) throws RegurgitatorException {
-        ParameterType entity = findParameterType(id);
+    public static ParameterType<?> parameterType(String id) throws RegurgitatorException {
+        ParameterType<?> entity = findParameterType(id);
 
         if (entity != null) {
             return entity;
@@ -83,9 +83,9 @@ public final class EntityLookup {
         throw new RegurgitatorException("Cannot load parameter type: " + id);
     }
 
-    private static ParameterType findParameterType(String id) {
+    private static ParameterType<?> findParameterType(String id) {
         for (EntityPack pack : ENTITY_PACKS) {
-            ParameterType entity = pack.getParameterType(id);
+            ParameterType<?> entity = pack.getParameterType(id);
 
             if (entity != null) {
                 return entity;

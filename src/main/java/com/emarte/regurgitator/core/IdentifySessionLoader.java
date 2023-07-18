@@ -7,8 +7,8 @@ package com.emarte.regurgitator.core;
 abstract class IdentifySessionLoader {
     Step buildIdentifySession(String id, String source, String value, Log log) throws RegurgitatorException {
         int numberSet = 0;
-        numberSet = source != null ? ++numberSet : numberSet;
-        numberSet = value != null ? ++numberSet : numberSet;
+        numberSet += source != null ? 1 : 0;
+        numberSet += value != null ? 1 : 0;
 
         if(numberSet == 0) {
             throw new RegurgitatorException("Source or value is required");
