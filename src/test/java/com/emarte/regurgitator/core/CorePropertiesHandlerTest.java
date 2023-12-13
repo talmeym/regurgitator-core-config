@@ -19,7 +19,7 @@ public class CorePropertiesHandlerTest {
     @Test
     public void testCorePropertiesHandler() {
         try {
-            assertEquals(new HashSet<String>(Arrays.asList("ABC", "DEF", "GHI")), SET_OF_STRING.convert("ABC,DEF,GHI,ABC"));
+            assertEquals(new HashSet<>(Arrays.asList("ABC", "DEF", "GHI")), SET_OF_STRING.convert("ABC,DEF,GHI,ABC"));
             assertEquals("ABC,DEF", STRING.convert(Arrays.asList("ABC", "DEF")));
 
             Properties properties = new Properties();
@@ -27,7 +27,7 @@ public class CorePropertiesHandlerTest {
 
             new CorePropertiesHandler().handle(properties);
 
-            assertEquals(new HashSet<String>(Arrays.asList("ABC", "DEF", "GHI")), SET_OF_STRING.convert("ABC|DEF|GHI|ABC"));
+            assertEquals(new HashSet<>(Arrays.asList("ABC", "DEF", "GHI")), SET_OF_STRING.convert("ABC|DEF|GHI|ABC"));
             assertEquals("ABC|DEF", STRING.convert(Arrays.asList("ABC", "DEF")));
         } catch (RegurgitatorException e) {
             fail("Exception: " + e.getMessage());
