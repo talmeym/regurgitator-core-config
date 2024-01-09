@@ -2,7 +2,7 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.core;
+package uk.emarte.regurgitator.core;
 
 import org.junit.Test;
 
@@ -10,10 +10,10 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Properties;
 
-import static com.emarte.regurgitator.core.CoreTypes.SET_OF_STRING;
-import static com.emarte.regurgitator.core.CoreTypes.STRING;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
+import static uk.emarte.regurgitator.core.CoreTypes.SET_OF_STRING;
+import static uk.emarte.regurgitator.core.CoreTypes.STRING;
 
 public class CorePropertiesHandlerTest {
     @Test

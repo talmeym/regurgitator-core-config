@@ -1,4 +1,4 @@
-package com.emarte.regurgitator.core;
+package uk.emarte.regurgitator.core;
 
 abstract class RemoveAtIndexProcessorBuilder {
     RemoveAtIndexProcessor buildRemoveAtIndexProcessor(String source, String value, Log log) throws RegurgitatorException {
