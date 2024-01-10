@@ -2,11 +2,11 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.core;
+package uk.emarte.regurgitator.core;
 
 import java.util.List;
 
-import static com.emarte.regurgitator.core.ValueSourceLoader.loadValueSource;
+import static uk.emarte.regurgitator.core.ValueSourceLoader.loadValueSource;
 
 abstract class CreateResponseLoader {
     Step buildCreateResponse(String id, String source, String value, String file, List<ValueProcessor> processors, Log log) throws RegurgitatorException {
