@@ -1,6 +1,6 @@
-package com.emarte.regurgitator.core;
+package uk.emarte.regurgitator.core;
 
-import static com.emarte.regurgitator.core.ValueSourceLoader.loadValueSource;
+import static uk.emarte.regurgitator.core.ValueSourceLoader.loadValueSource;
 
 abstract class RemoveAtIndexProcessorBuilder {
     RemoveAtIndexProcessor buildRemoveAtIndexProcessor(String source, String value, Log log) throws RegurgitatorException {

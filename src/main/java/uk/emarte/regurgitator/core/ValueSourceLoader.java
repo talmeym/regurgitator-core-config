@@ -1,9 +1,9 @@
-package com.emarte.regurgitator.core;
+package uk.emarte.regurgitator.core;
 
 import java.io.IOException;
 
-import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
-import static com.emarte.regurgitator.core.FileUtil.streamToString;
+import static uk.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
+import static uk.emarte.regurgitator.core.FileUtil.streamToString;
 
 public final class ValueSourceLoader {
     public static ValueSource loadValueSource(String source, String value, String file) throws RegurgitatorException {

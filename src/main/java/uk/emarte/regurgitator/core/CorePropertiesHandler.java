@@ -2,11 +2,11 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.core;
+package uk.emarte.regurgitator.core;
 
 import java.util.Properties;
 
-import static com.emarte.regurgitator.core.Log.getLog;
+import static uk.emarte.regurgitator.core.Log.getLog;
 
 public class CorePropertiesHandler implements ConfigPropertiesHandler {
     private static final Log LOG = getLog(CorePropertiesHandler.class);
