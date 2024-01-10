@@ -2,16 +2,16 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.core;
+package uk.emarte.regurgitator.core;
 
 import java.io.IOException;
 import java.util.Properties;
 import java.util.ServiceLoader;
 
-import static com.emarte.regurgitator.core.CacheProvider.Cache;
-import static com.emarte.regurgitator.core.EntityLookup.configurationLoader;
-import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
-import static com.emarte.regurgitator.core.Log.getLog;
+import static uk.emarte.regurgitator.core.CacheProvider.Cache;
+import static uk.emarte.regurgitator.core.EntityLookup.configurationLoader;
+import static uk.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
+import static uk.emarte.regurgitator.core.Log.getLog;
 
 public final class ConfigurationFile {
     private static final Log log = getLog(ConfigurationFile.class);
