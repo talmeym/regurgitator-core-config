@@ -1,12 +1,10 @@
 package uk.emarte.regurgitator.core;
 
+import static uk.emarte.regurgitator.core.ValueSourceLoader.loadValueSource;
+
 abstract class RemoveAtIndexProcessorBuilder {
     RemoveAtIndexProcessor buildRemoveAtIndexProcessor(String source, String value, Log log) throws RegurgitatorException {
-        if(source == null && value == null) {
-            throw new RegurgitatorException("Source or value is required");
-        }
-
         log.debug("Loaded remove at processor");
-        return new RemoveAtIndexProcessor(new ValueSource(source != null ? new ContextLocation(source) : null, value));
+        return new RemoveAtIndexProcessor(loadValueSource(source, value));
     }
 }

@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AbstractEntityPack implements EntityPack {
-    private final Map<String, ConditionBehaviour> CONDITION_BEHAVIOURS = new HashMap<String, ConditionBehaviour>();
-    private final Map<String, ConfigurationLoader> CONFIGURATION_LOADERS = new HashMap<String, ConfigurationLoader>();
-    private final Map<String, ParameterType<?>> PARAMETER_TYPES = new HashMap<String, ParameterType<?>>();
-    private final Map<String, RulesBehaviour> RULES_BEHAVIOURS = new HashMap<String, RulesBehaviour>();
-    private final Map<String, ValueBuilder> VALUE_BUILDERS = new HashMap<String, ValueBuilder>();
-    private final Map<String, ValueGenerator> VALUE_GENERATORS = new HashMap<String, ValueGenerator>();
-    private final Map<String, ValueProcessor> VALUE_PROCESSORS = new HashMap<String, ValueProcessor>();
+    private final Map<String, ConditionBehaviour> CONDITION_BEHAVIOURS = new HashMap<>();
+    private final Map<String, ConfigurationLoader> CONFIGURATION_LOADERS = new HashMap<>();
+    private final Map<String, ParameterType<?>> PARAMETER_TYPES = new HashMap<>();
+    private final Map<String, RulesBehaviour> RULES_BEHAVIOURS = new HashMap<>();
+    private final Map<String, ValueBuilder> VALUE_BUILDERS = new HashMap<>();
+    private final Map<String, ValueGenerator> VALUE_GENERATORS = new HashMap<>();
+    private final Map<String, ValueProcessor> VALUE_PROCESSORS = new HashMap<>();
 
     protected void addConditionBehaviour(String code, ConditionBehaviour behaviour) {
         CONDITION_BEHAVIOURS.put(code, behaviour);
