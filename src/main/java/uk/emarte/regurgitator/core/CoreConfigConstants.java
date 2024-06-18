@@ -36,4 +36,5 @@ public interface CoreConfigConstants {
     String FOLDER ="folder";
     String INDEX_SOURCE = "index-source";
     String VALUE_SOURCE = "value-source";
+    String OPTIONAL = "optional";
 }
