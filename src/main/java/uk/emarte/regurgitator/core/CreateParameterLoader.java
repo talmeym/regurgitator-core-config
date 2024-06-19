@@ -9,8 +9,8 @@ import java.util.List;
 import static uk.emarte.regurgitator.core.ValueSourceLoader.loadValueSource;
 
 abstract class CreateParameterLoader {
-    Step buildCreateParameter(String id, ParameterPrototype prototype, String context, String source, String value, String file, List<ValueProcessor> processors, Log log) throws RegurgitatorException {
+    Step buildCreateParameter(String id, ParameterPrototype prototype, String context, String source, String value, String file, List<ValueProcessor> processors, boolean optional, Log log) throws RegurgitatorException {
         log.debug("Loaded create parameter '{}'", id);
-        return new CreateParameter(id, prototype, context, loadValueSource(source, value, file), processors);
+        return new CreateParameter(id, prototype, context, loadValueSource(source, value, file), processors, optional);
     }
 }
