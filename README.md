@@ -4,4 +4,6 @@ regurgitator is a lightweight, modular, extendable java framework that you confi
 
 start your reading here: [regurgitator-all](https://talmeym.github.io/regurgitator-all#regurgitator)
 
-[``apidocs``](https://regurgitator.emarte.uk/apidocs/regurgitator-core-config/0.1.4/){:target="_blank"}
+--- 
+
+api docs: [``0.1.4``](https://regurgitator.emarte.uk/apidocs/regurgitator-core-config/0.1.4/){:target="_blank"} [``0.1.3``](https://regurgitator.emarte.uk/apidocs/regurgitator-core-config/0.1.3/){:target="_blank"} [``0.1.2``](https://regurgitator.emarte.uk/apidocs/regurgitator-core-config/0.1.2/){:target="_blank"}
